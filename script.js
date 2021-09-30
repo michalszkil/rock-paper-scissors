@@ -7,7 +7,7 @@ function computerPlay() {
     return selection
 }
 
-// Returns 0 if the player wins, 1 if computer wins, 2 if it's a draw
+// Returns 0 if the player wins, 1 if the computer wins, 2 if it's a draw
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
         console.log("You win! Rock beats scissors")
@@ -33,14 +33,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-// const computerSelection = computerPlay();
-
 function game() {
-
+    
     let score = [0, 0];
 
     for (let i = 0; i < 5; i++) {
+
+        let playerSelection = "nothing"
+
+        while (playerSelection.toLowerCase() != "rock" 
+        && playerSelection.toLowerCase() != "paper" 
+        && playerSelection.toLowerCase() != "scissors") {
+            playerSelection = prompt("Make your choice! Rock, paper or scissors?");
+            console.log("You choose " + playerSelection.toLowerCase())
+        } 
+    
         let computerSelection = computerPlay();
         switch (playRound(playerSelection, computerSelection)) {
             case 0:
@@ -55,7 +62,15 @@ function game() {
                 break;
         }
     }
-    console.log(score)
+    console.log("The score: " + score[0] + " : " + score[1])
+
+    if (score[0] > score[1]) {
+        console.log("You won the game!")
+    } else if (score[0] < score[1]) {
+        console.log("You lost the game!")
+    } else {
+        console.log("The game ended in a draw!")
+    }
 }
 
 game();
