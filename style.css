@@ -1,0 +1,40 @@
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0; /*Bez tego był problem z dopasowaniem rozmiaru body do okna*/
+}
+
+#title {
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#score-box {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* width: 100%; */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
