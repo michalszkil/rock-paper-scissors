@@ -9,12 +9,14 @@ body {
     height: 100%;
     margin: 0; /*Bez tego był problem z dopasowaniem rozmiaru body do okna*/
     background-color: #C85503;
+    color: #003A87;
 }
 
 header {
     text-align: center;
     padding: 20px 0;
     background-color: #FAA61D;
+    color: #2F91B5;
 }
 
 #title {
@@ -46,4 +48,5 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #A03304;
+    color: #000368;
 }
