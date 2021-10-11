@@ -8,6 +8,13 @@ body {
     justify-content: space-between;
     height: 100%;
     margin: 0; /*Bez tego był problem z dopasowaniem rozmiaru body do okna*/
+    background-color: #C85503;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #FAA61D;
 }
 
 #title {
@@ -24,7 +31,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-
+    background-color: #D5720C;
 }
 
 #score-box {
@@ -32,9 +39,11 @@ body {
     /* justify-content: space-between; */
     justify-content: center;
     /* width: 100%; */
+    background-color: #8A2702;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
+    background-color: #A03304;
 }
