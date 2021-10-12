@@ -44,6 +44,14 @@ header {
     background-color: #8A2702;
 }
 
+#score {
+    display: flex;
+}
+
+#alert {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
