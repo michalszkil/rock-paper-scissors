@@ -38,6 +38,20 @@ header {
     font-size: 30px;
 }
 
+#rules {
+    text-align: center;
+    background-color: #D5720C;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    color: #003A87;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 #game {
     display: flex;
     flex-direction: column;
