@@ -4,6 +4,41 @@ function computerPlay() {
     let options = ["rock", "paper", "scissors", "lizard", "spock"];
     let selection = options[Math.floor(Math.random()*options.length)];
     console.log("Computer chooses " + selection)
+    timeout = 250;
+    switch(selection) {
+        case "rock":
+            button_rock_img.style.backgroundColor = "red";
+            setTimeout(function(){
+                button_rock_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+              }, timeout);
+            break;
+        case "paper":
+            button_paper_img.style.backgroundColor = "red";
+            setTimeout(function(){
+                button_paper_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+              }, timeout);
+            break;
+        case "scissors":
+            button_scissors_img.style.backgroundColor = "red";
+            setTimeout(function(){
+                button_scissors_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+              }, timeout);
+            break;
+        case "lizard":
+            button_lizard_img.style.backgroundColor = "red";
+            setTimeout(function(){
+                button_lizard_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+              }, timeout);
+            break;
+        case "spock":
+            button_spock_img.style.backgroundColor = "red";
+            setTimeout(function(){
+                button_spock_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+              }, timeout);
+            break;
+        default:
+            break;
+    }
     return selection
 }
 
@@ -143,6 +178,13 @@ const button_paper = document.getElementById("btn-paper");
 const button_scissors = document.getElementById("btn-scissors");
 const button_lizard = document.getElementById("btn-lizard");
 const button_spock = document.getElementById("btn-spock");
+
+const button_rock_img = document.getElementById("btn-rock-img");
+const button_paper_img = document.getElementById("btn-paper-img");
+const button_scissors_img = document.getElementById("btn-scissors-img");
+const button_lizard_img = document.getElementById("btn-lizard-img");
+const button_spock_img = document.getElementById("btn-spock-img");
+
 const div_score_player = document.getElementById("score-player");
 const div_score_computer = document.getElementById("score-computer");
 const score_alert = document.getElementById("alert");
