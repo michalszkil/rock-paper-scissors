@@ -53,7 +53,7 @@ function playRound(playerSelection, computerSelection) {
         return 1
     } else if (playerSelection.toLowerCase() == "lizard" && computerSelection == "spock") {
         console.log("You win! Lizard poisons Spock");
-        writeAlert("You win! Lizard poisons spock");
+        writeAlert("You win! Lizard poisons Spock");
         score[0]++;
         return 0
     } else if (playerSelection.toLowerCase() == "spock" && computerSelection == "lizard") {
@@ -92,13 +92,13 @@ function playRound(playerSelection, computerSelection) {
         score[1]++;
         return 1
     } else if (playerSelection.toLowerCase() == "paper" && computerSelection == "spock") {
-        console.log("You win! Paper disproves spock");
-        writeAlert("You win! Paper disproves spock");
+        console.log("You win! Paper disproves Spock");
+        writeAlert("You win! Paper disproves Spock");
         score[0]++;
         return 0
     } else if (playerSelection.toLowerCase() == "spock" && computerSelection == "paper") {
-        console.log("You lose! Paper disproves spock");
-        writeAlert("You lose! Paper disproves spock");
+        console.log("You lose! Paper disproves Spock");
+        writeAlert("You lose! Paper disproves Spock");
         score[1]++;
         return 1
     } else if (playerSelection.toLowerCase() == "spock" && computerSelection == "rock") {
@@ -118,46 +118,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    
-    let score = [0, 0];
-
-
-    let playerSelection = "nothing";
-
-    // while (playerSelection.toLowerCase() != "rock" 
-    // && playerSelection.toLowerCase() != "paper" 
-    // && playerSelection.toLowerCase() != "scissors") {
-    //     playerSelection = prompt("Make your choice! Rock, paper or scissors?");
-    //     console.log("You choose " + playerSelection.toLowerCase())
-    // } 
-
-
-    let computerSelection = computerPlay();
-    switch (playRound(playerSelection, computerSelection)) {
-        case 0:
-            score[0]++;
-            break;
-
-        case 1:
-            score[1]++;
-            break;
-
-        default:
-            break;
-    }
-
-    console.log("The score: " + score[0] + " : " + score[1])
-
-    if (score[0] > score[1]) {
-        console.log("You won the game!")
-    } else if (score[0] < score[1]) {
-        console.log("You lost the game!")
-    } else {
-        console.log("The game ended in a draw!")
-    }
-}
-
 function updateScore() {
     div_score_player.innerText = score[0];
     div_score_computer.innerText = score[1];
@@ -170,11 +130,11 @@ function writeAlert(text) {
 function checkForWinner(){
     console.log("Checking for winner")
     if(score[0] == 5) { /*Timeout bo inaczej alert wyświetla się bez czekania an zmiany w DOM*/
-        setTimeout(function () { alert("You won the game!"); }, 1);
         score = [0, 0];
+        score_alert.innerText = "You won the game :D \n Play again?";
     } else if(score[1] == 5) {
-        setTimeout(function () { alert("You lost the game!"); }, 1);
         score = [0, 0];
+        score_alert.innerText = "You lost the game :/ \n Play again?";
     }
 }
 
@@ -183,7 +143,6 @@ const button_paper = document.getElementById("btn-paper");
 const button_scissors = document.getElementById("btn-scissors");
 const button_lizard = document.getElementById("btn-lizard");
 const button_spock = document.getElementById("btn-spock");
-const div_score = document.getElementById("score");
 const div_score_player = document.getElementById("score-player");
 const div_score_computer = document.getElementById("score-computer");
 const score_alert = document.getElementById("alert");
@@ -193,37 +152,30 @@ let score = [0, 0];
 button_rock.addEventListener("click", function () {
     console.log("You chose rock!");
     playRound("rock", computerPlay());
-    // div_score.innerText = score;
     updateScore();
     checkForWinner();
 });
 button_paper.addEventListener("click", function () {
     console.log("You chose paper!");
     playRound("paper", computerPlay());
-    // div_score.innerText = score;
     updateScore();
     checkForWinner();
 });
 button_scissors.addEventListener("click", function () {
     console.log("You chose scissors!");
     playRound("scissors", computerPlay());
-    // div_score.innerText = score;
     updateScore();
     checkForWinner();
 });
 button_lizard.addEventListener("click", function () {
     console.log("You chose lizard!");
     playRound("lizard", computerPlay());
-    // div_score.innerText = score;
     updateScore();
     checkForWinner();
 });
 button_spock.addEventListener("click", function () {
     console.log("You chose spock!");
     playRound("spock", computerPlay());
-    // div_score.innerText = score;
     updateScore();
     checkForWinner();
 });
-
-// game();

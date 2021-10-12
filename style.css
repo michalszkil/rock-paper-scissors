@@ -8,7 +8,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    margin: 0; /*Bez tego był problem z dopasowaniem rozmiaru body do okna*/
+    margin: 0;
     background-color: #C85503;
     color: #003A87;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -58,7 +58,7 @@ header {
     height: 145px;
     padding: 0;
     border: none;
-    background-color: #D5720C; /*To jest trochę oszukane, dałem kolor buttona taki sam jak kolor tła, bo nie chciał się stylizować*/
+    background-color: #D5720C;
     border-radius: 15px;
 }
 
@@ -79,9 +79,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    /* justify-content: space-between; */
     justify-content: center;
-    /* width: 100%; */
     background-color: #ffc36a;
     border: solid 5px #003A87;
     border-radius: 15px;
@@ -98,6 +96,7 @@ header {
     text-align: center;
     font-weight: 700;
     font-size: 28px;
+    height: 64px;
 }
 
 footer {
