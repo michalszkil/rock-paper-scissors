@@ -36,6 +36,19 @@ header {
     background-color: #D5720C;
 }
 
+#buttons button {
+    width: 150px;
+    height: 145px;
+    padding: 0;
+    border: none;
+}
+
+#buttons button img{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
 #score-box {
     display: flex;
     /* justify-content: space-between; */
