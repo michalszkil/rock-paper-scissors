@@ -11,14 +11,17 @@ body {
     margin: 0; /*Bez tego był problem z dopasowaniem rozmiaru body do okna*/
     background-color: #C85503;
     color: #003A87;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 header {
     text-align: center;
     padding: 20px 0;
     background-color: #FAA61D;
-    color: #2F91B5;
+    color: #2f4eb5;
     width: 100%;
+    font-weight: 900;
+    font-size: 16px;
 }
 
 #title {
@@ -31,6 +34,8 @@ header {
     width: 300px;
     color: #003A87;
     border-radius: 15px;
+    font-weight: 900;
+    font-size: 30px;
 }
 
 #game {
@@ -57,11 +62,16 @@ header {
     border-radius: 15px;
 }
 
+#buttons button img:hover {
+    transform: scale(1.1);
+}
+
 #buttons button img{
     width: 100%;
     height: 100%;
     background-color: #72CBDB;
     border-radius: 35px;
+    transition: transform .3s;
 }
 
 #score-box {
@@ -73,9 +83,11 @@ header {
     justify-content: center;
     /* width: 100%; */
     background-color: #ffc36a;
-    border: solid 5px #72CBDB;
+    border: solid 5px #003A87;
     border-radius: 15px;
     padding: 10px;
+    font-weight: 400;
+    font-size: 28px;
 }
 
 #score {
@@ -84,12 +96,16 @@ header {
 
 #alert {
     text-align: center;
+    font-weight: 700;
+    font-size: 28px;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #A03304;
+    background-color: #bd4d1d;
     color: #000368;
     width: 100%;
+    font-weight: 600;
+    font-size: 16px;
 }

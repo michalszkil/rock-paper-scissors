@@ -164,7 +164,18 @@ function updateScore() {
 }
 
 function writeAlert(text) {
-    alert.innerText = text;
+    score_alert.innerText = text;
+}
+
+function checkForWinner(){
+    console.log("Checking for winner")
+    if(score[0] == 5) { /*Timeout bo inaczej alert wyświetla się bez czekania an zmiany w DOM*/
+        setTimeout(function () { alert("You won the game!"); }, 1);
+        score = [0, 0];
+    } else if(score[1] == 5) {
+        setTimeout(function () { alert("You lost the game!"); }, 1);
+        score = [0, 0];
+    }
 }
 
 const button_rock = document.getElementById("btn-rock");
@@ -175,7 +186,7 @@ const button_spock = document.getElementById("btn-spock");
 const div_score = document.getElementById("score");
 const div_score_player = document.getElementById("score-player");
 const div_score_computer = document.getElementById("score-computer");
-const alert = document.getElementById("alert");
+const score_alert = document.getElementById("alert");
 
 let score = [0, 0];
 
@@ -184,30 +195,35 @@ button_rock.addEventListener("click", function () {
     playRound("rock", computerPlay());
     // div_score.innerText = score;
     updateScore();
+    checkForWinner();
 });
 button_paper.addEventListener("click", function () {
     console.log("You chose paper!");
     playRound("paper", computerPlay());
     // div_score.innerText = score;
     updateScore();
+    checkForWinner();
 });
 button_scissors.addEventListener("click", function () {
     console.log("You chose scissors!");
     playRound("scissors", computerPlay());
     // div_score.innerText = score;
     updateScore();
+    checkForWinner();
 });
 button_lizard.addEventListener("click", function () {
     console.log("You chose lizard!");
     playRound("lizard", computerPlay());
     // div_score.innerText = score;
     updateScore();
+    checkForWinner();
 });
 button_spock.addEventListener("click", function () {
     console.log("You chose spock!");
     playRound("spock", computerPlay());
     // div_score.innerText = score;
     updateScore();
+    checkForWinner();
 });
 
 // game();
