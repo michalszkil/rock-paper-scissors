@@ -196,28 +196,48 @@ button_rock.addEventListener("click", function () {
     playRound("rock", computerPlay());
     updateScore();
     checkForWinner();
+    button_rock_img.style.backgroundColor = "green";
+    setTimeout(function(){
+        button_rock_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+      }, 250);
 });
 button_paper.addEventListener("click", function () {
     console.log("You chose paper!");
     playRound("paper", computerPlay());
     updateScore();
     checkForWinner();
+    button_paper_img.style.backgroundColor = "green";
+    setTimeout(function(){
+        button_paper_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+      }, 250);
 });
 button_scissors.addEventListener("click", function () {
     console.log("You chose scissors!");
     playRound("scissors", computerPlay());
     updateScore();
     checkForWinner();
+    button_scissors_img.style.backgroundColor = "green";
+    setTimeout(function(){
+        button_scissors_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+      }, 250);
 });
 button_lizard.addEventListener("click", function () {
     console.log("You chose lizard!");
     playRound("lizard", computerPlay());
     updateScore();
     checkForWinner();
+    button_lizard_img.style.backgroundColor = "green";
+    setTimeout(function(){
+        button_lizard_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+      }, 250);
 });
 button_spock.addEventListener("click", function () {
     console.log("You chose spock!");
     playRound("spock", computerPlay());
     updateScore();
     checkForWinner();
+    button_spock_img.style.backgroundColor = "green";
+    setTimeout(function(){
+        button_spock_img.style.backgroundColor = "#72CBDB";  // Change the color back to the original
+      }, 250);
 });
